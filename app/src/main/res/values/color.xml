@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPurple">#673AB7</color>
+    <color name="colorBlue">#3F51B5</color>
+
+    <color name="orange">#FF9800</color>
+
+    <color name="darkOrange">#FF5722</color>
+    <color name="shadow_color">#403F42</color>
+    <color name="color_white">#FFFFFF</color>
+
+    <color name="color_green">#8BC34A</color>
+    <color name="darkGreen">#4CAF50</color>
+    <color name="darkGray">#BEC1BF</color>
+
+    <color name="black">#0C0C0C</color>
+
+    <color name="lightPurple">#9C6EED</color>
+</resources>
