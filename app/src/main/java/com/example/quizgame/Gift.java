@@ -11,6 +11,7 @@ public class Gift {
         this.giftImage = giftImage;
         this.giftName = giftName;
         this.giftPrice = giftPrice;
+//abc
     }
 
     public String getGiftImage() {
