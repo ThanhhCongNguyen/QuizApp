@@ -1,18 +1,22 @@
 package com.example.quizgame;
 
 public class User {
-    private String name, email, pass, referCode;
+    private String name, email, pass;
     private long coins = 100;
 
 
     public User() {
     }
 
-    public User(String name, String email, String pass, String referCode) {
+    public User(String name, String email, String pass) {
         this.name = name;
         this.email = email;
         this.pass = pass;
-        this.referCode = referCode;
+    }
+
+    public User(String name, long coins) {
+        this.name = name;
+        this.coins = coins;
     }
 
     public String getName() {
@@ -37,14 +41,6 @@ public class User {
 
     public void setPass(String pass) {
         this.pass = pass;
-    }
-
-    public String getReferCode() {
-        return referCode;
-    }
-
-    public void setReferCode(String referCode) {
-        this.referCode = referCode;
     }
 
     public long getCoins() {

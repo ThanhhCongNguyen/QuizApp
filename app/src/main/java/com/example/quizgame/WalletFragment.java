@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,12 +18,22 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import java.util.ArrayList;
 
 public class WalletFragment extends Fragment {
 
     FragmentWalletBinding binding;
     FirebaseFirestore database;
     User user;
+
+    ArrayList<Gift> giftArrayList;
+    GiftAdapter giftAdapter;
+
+    public static String EMAIL = "";
+    long coins = 0;
+
     public WalletFragment() {
     }
 
@@ -44,34 +55,32 @@ public class WalletFragment extends Fragment {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         user = documentSnapshot.toObject(User.class);
-                        binding.currentCoints.setText(String.valueOf(user.getCoins()));
+                        EMAIL = user.getEmail();
+                        coins = user.getCoins();
+                        binding.currentCoints.setText(String.valueOf(coins));
+
                     }
                 });
 
-        binding.sendBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String uid = FirebaseAuth.getInstance().getUid();
-                String payPal = binding.emailAddress.getText().toString();
+        giftArrayList = new ArrayList<>();
 
-                WithdrawRequest request = new WithdrawRequest(uid, payPal, user.getName());
-                if(user.getCoins() >= 50000){
-                    database
-                            .collection("withdraws")
-                            .document(FirebaseAuth.getInstance().getUid())
-                            .set(request).addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void unused) {
-                            Toast.makeText(getContext(),"Request sent successfully", Toast.LENGTH_LONG).show();
+        database.collection("Gifts")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for(DocumentSnapshot snapshot : queryDocumentSnapshots){
+                            Gift gift = snapshot.toObject(Gift.class);
+                            giftArrayList.add(gift);
                         }
-                    });
+                        giftAdapter.notifyDataSetChanged();
 
-                }else {
-                    Toast.makeText(getContext(),"You need more coins to get withdraw", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
+                    }
+                });
 
+        giftAdapter = new GiftAdapter(getContext(), giftArrayList, coins);
+        binding.recyclerviewGift.setAdapter(giftAdapter);
+        binding.recyclerviewGift.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return binding.getRoot();
     }

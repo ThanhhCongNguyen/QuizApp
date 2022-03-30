@@ -97,20 +97,6 @@
                 android:inputType="textPassword"
                 android:padding="15dp" />
 
-            <EditText
-                android:id="@+id/referBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/textbox"
-                android:drawableLeft="@drawable/user"
-                android:drawablePadding="15dp"
-                android:drawableTint="@color/colorPurple"
-                android:ems="10"
-                android:hint="Refer code"
-                android:inputType="textPersonName"
-                android:padding="15dp" />
-
             <Button
                 android:id="@+id/submitBtn"
                 android:layout_width="match_parent"

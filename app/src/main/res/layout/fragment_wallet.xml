@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/name_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -56,44 +56,10 @@
         android:textColor="@color/color_white"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="@+id/name_text"
         app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
-
-    <EditText
-        android:id="@+id/emailAddress"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/option_unselected"
-        android:drawableLeft="@drawable/ic_paypal"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Paypal Email Address"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/view7"
-        app:layout_constraintHorizontal_bias="0.186"
-        app:layout_constraintStart_toStartOf="@+id/view7"
-        app:layout_constraintTop_toBottomOf="@+id/view7" />
-
-    <Button
-        android:id="@+id/sendBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/button_3"
-        android:text="Send Request"
-        android:textColor="@color/color_white"
-        app:backgroundTint="@null"
-        app:layout_constraintEnd_toEndOf="@+id/emailAddress"
-        app:layout_constraintStart_toStartOf="@+id/emailAddress"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddress" />
+        app:layout_constraintStart_toStartOf="@+id/name_text"
+        app:layout_constraintTop_toBottomOf="@+id/name_text" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -113,4 +79,31 @@
         android:src="@drawable/victory_icon"
         app:layout_constraintBottom_toBottomOf="@+id/view7"
         app:layout_constraintStart_toStartOf="@+id/view7" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Exchange them for luxury gifts"
+        android:textColor="@color/colorPurple"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintStart_toStartOf="@+id/view7"
+        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_gift"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,10 @@
 
     <item android:id="@+id/logout"
         android:title="Log Out"
-        app:showAsAction="always"
         android:icon="@drawable/ic_logout"/>
+
+    <item android:id="@+id/statistic"
+        android:title="History"
+        android:icon="@drawable/ic_assignment"/>
 
 </menu>

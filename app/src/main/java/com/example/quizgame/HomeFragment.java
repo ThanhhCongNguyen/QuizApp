@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,13 +50,25 @@ public class HomeFragment extends Fragment {
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-                        categoryModels.clear();
-                        for(DocumentSnapshot snapshot : value.getDocuments()){
-                            CategoryModel model = snapshot.toObject(CategoryModel.class);
-                            model.setCategoryId(snapshot.getId());
-                            categoryModels.add(model);
+                        if(error != null){
+                            Log.d("er","Error:"+error.getMessage());
+                        }else {
+                            categoryModels.clear();
+                            for(DocumentSnapshot snapshot : value.getDocuments()){
+                                CategoryModel model = snapshot.toObject(CategoryModel.class);
+                                model.setCategoryId(snapshot.getId());
+                                categoryModels.add(model);
+                            }
+                            categoryAdapter.notifyDataSetChanged();
                         }
-                        categoryAdapter.notifyDataSetChanged();
+
+//                        categoryModels.clear();
+//                        for(DocumentSnapshot snapshot : value.getDocuments()){
+//                            CategoryModel model = snapshot.toObject(CategoryModel.class);
+//                            model.setCategoryId(snapshot.getId());
+//                            categoryModels.add(model);
+//                        }
+//                        categoryAdapter.notifyDataSetChanged();
                     }
                 });
 

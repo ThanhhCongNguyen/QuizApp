@@ -46,6 +46,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
             public void onClick(View view) {
                 Intent intent = new Intent(context, QuizActivity.class);
                 intent.putExtra("catId", categoryModel.getCategoryId());
+                intent.putExtra("categoryName", categoryModel.getCategoryName());
                 context.startActivity(intent);
             }
         });

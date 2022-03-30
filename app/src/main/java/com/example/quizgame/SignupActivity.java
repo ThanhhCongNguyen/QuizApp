@@ -24,7 +24,7 @@ public class SignupActivity extends AppCompatActivity {
     FirebaseAuth auth;
     ProgressDialog dialog;
 
-    String email, pass, name, referCode;
+    String email, pass, name;
     String emailpattern  = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
     FirebaseFirestore database;
@@ -50,10 +50,10 @@ public class SignupActivity extends AppCompatActivity {
                 email = binding.emailBox.getText().toString();
                 pass = binding.passwordBox.getText().toString();
                 name = binding.nameBox.getText().toString();
-                referCode = binding.referBox.getText().toString();
 
 
-                final User user = new User(name, email, pass, referCode);
+
+                final User user = new User(name, email, pass);
 
                 if (isValid()) {
                 dialog.show();
@@ -104,7 +104,7 @@ public class SignupActivity extends AppCompatActivity {
 
    public boolean isValid(){
         boolean isValid = false;
-        if(email.matches("") || pass.matches("") || name.matches("")|| referCode.matches("")){
+        if(email.matches("") || pass.matches("") || name.matches("")){
             Toast.makeText(getApplicationContext(),"Email or Password is not null ", Toast.LENGTH_LONG).show();
         }else {
             isValid = true;

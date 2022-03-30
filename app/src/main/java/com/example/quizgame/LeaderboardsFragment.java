@@ -1,16 +1,22 @@
 package com.example.quizgame;
 
+import static com.example.quizgame.WalletFragment.EMAIL;
+
+import android.app.ProgressDialog;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.quizgame.databinding.FragmentLeaderboardsBinding;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
@@ -21,6 +27,8 @@ import java.util.ArrayList;
 public class LeaderboardsFragment extends Fragment {
 
     FragmentLeaderboardsBinding binding;
+//    ProgressDialog progressDialog;
+  //  int userPlace = 0;
 
     public LeaderboardsFragment() {
         // Required empty public constructor
@@ -31,6 +39,10 @@ public class LeaderboardsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+//        progressDialog = new ProgressDialog(getContext());
+//        progressDialog.setMessage("Loading Leaderboard...");
+//        progressDialog.show();
+
     }
 
     @Override
@@ -39,7 +51,7 @@ public class LeaderboardsFragment extends Fragment {
         binding = FragmentLeaderboardsBinding.inflate(inflater, container, false);
 
         ArrayList<User> users = new ArrayList<>();
-        LeaderBoardsAdapter leaderBoardsAdapter = new LeaderBoardsAdapter(getContext(), users);
+        LeaderBoardsAdapter leaderBoardsAdapter = new LeaderBoardsAdapter(getContext(), users, EMAIL);
 
         binding.rycLeaderboard.setAdapter(leaderBoardsAdapter);
         binding.rycLeaderboard.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -53,11 +65,18 @@ public class LeaderboardsFragment extends Fragment {
                 for(DocumentSnapshot snapshot : queryDocumentSnapshots){
                     User user = snapshot.toObject(User.class);
                     users.add(user);
+
                 }
+
+//                LeaderBoardsAdapter leaderBoardsAdapter = new LeaderBoardsAdapter(getContext(), users, userPlace);
+//
+//                binding.rycLeaderboard.setAdapter(leaderBoardsAdapter);
+//                binding.rycLeaderboard.setLayoutManager(new LinearLayoutManager(getContext()));
 
                 leaderBoardsAdapter.notifyDataSetChanged();
             }
         });
+//        LeaderBoardsAdapter leaderBoardsAdapter = new LeaderBoardsAdapter(getContext(), users, userPlace);
 
 
 

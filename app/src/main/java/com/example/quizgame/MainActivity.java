@@ -19,8 +19,6 @@ import android.view.MenuItem;
 
 import com.example.quizgame.databinding.ActivityMainBinding;
 
-import java.util.zip.Inflater;
-
 import me.ibrahimsn.lib.OnItemSelectedListener;
 
 public class MainActivity extends AppCompatActivity {
@@ -108,6 +106,9 @@ public class MainActivity extends AppCompatActivity {
 
             AlertDialog alertDialog = builder.create();
             alertDialog.show();
+        }else {
+            startActivity(new Intent(MainActivity.this, HistoryActivity.class));
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

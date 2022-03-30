@@ -12,22 +12,29 @@
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/ic_dollar.xml" value="0.12129629629629629" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/ic_logout.xml" value="0.15185185185185185" />
+        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/ic_navigate_next.xml" value="0.17407407407407408" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/ic_paypal.xml" value="0.12129629629629629" />
+        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/ic_phone.xml" value="0.17407407407407408" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/ic_question.xml" value="0.12129629629629629" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/ic_share.xml" value="0.12129629629629629" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/ic_trophy.xml" value="0.12129629629629629" />
+        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/leaderboard_background.xml" value="0.17407407407407408" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/login_btn.xml" value="0.12129629629629629" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/option_right.xml" value="0.12129629629629629" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/option_unselected.xml" value="0.12129629629629629" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/option_wrong.xml" value="0.12129629629629629" />
+        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/profile_background.xml" value="0.17407407407407408" />
+        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/profile_view.xml" value="0.17407407407407408" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/round_wallet.xml" value="0.17407407407407408" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/rounded_box.xml" value="0.12129629629629629" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/submit_btn.xml" value="0.12129629629629629" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/drawable/textbox.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/activity_history.xml" value="0.1597222222222222" />
+        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/activity_lich_su_lam_bai.xml" value="0.1597222222222222" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/activity_quiz.xml" value="0.22" />
-        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/activity_result.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/activity_result.xml" value="0.22" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/activity_signup.xml" value="0.22" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/activity_spin_wheel.xml" value="0.1597222222222222" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/activity_spinner.xml" value="0.22" />
@@ -37,10 +44,13 @@
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/fragment_leaderboards.xml" value="0.3333333333333333" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/fragment_wallect.xml" value="0.22" />
-        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/fragment_wallet.xml" value="0.3333333333333333" />
+        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/fragment_wallet.xml" value="0.22" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/item_category.xml" value="0.16666666666666666" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/lucky_wheel_layout.xml" value="0.1" />
+        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/row_gift.xml" value="0.1597222222222222" />
+        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/row_history.xml" value="0.3333333333333333" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/row_leaderboards.xml" value="0.22" />
+        <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/layout/row_lslb.xml" value="0.22" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/menu/home_menu.xml" value="0.1" />
         <entry key="..\:/Android Tutorial/CodelabsAndroid/QuizGame/app/src/main/res/menu/menu.xml" value="0.1" />
       </map>
